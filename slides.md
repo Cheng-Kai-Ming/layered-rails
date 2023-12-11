@@ -1507,7 +1507,7 @@ h1 {
 # 實際應用
 
 <div id="container" style="height: 100%">
-```ruby {monaco-diff} {maxHeight:'450px', lines:true, startLine:1}
+```ruby{monaco-diff}
 def create
   @tour = @school.tour_registrations.new(tour_params)
   @student = params[:page_student_id] ? @school.students.find(params[:page_student_id]) : @tour.students.first
