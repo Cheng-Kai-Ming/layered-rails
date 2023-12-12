@@ -1799,7 +1799,7 @@ click3
 
 ---
 
-# Domain Layer - Query
+# Application Layer - Query
 
 <div class="flex justify-center items-center h-full">
   <img src="/photo/pre-query.png" alt="Description" class="object-fill max-w-3/5">
@@ -1832,6 +1832,28 @@ Query Object允許我們將查詢邏輯從模型中分離出來，把它們封�
 
 這層的兩個重點就是重用跟避免fat model
 -->
+
+---
+
+# Application Layer - Query Object
+
+Query Object: 用於建置和封裝資料庫查詢。
+
+-> 這個模式的主要目的是將持久層（通常指資料庫操作）與領域邏輯（業務邏輯）分離，從而提高程式碼的可維護性和可重複使用性
+
+簡言之，Query Object它的主要目的是從模型（Model）中提取出複雜的查詢，並將這些查詢封裝在獨立的對象中，來降低model的user-facing features，並且以Domain-level Object作為輸入，來負責特定場景下的查詢狀況。
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
 
