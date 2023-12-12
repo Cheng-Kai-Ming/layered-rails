@@ -1911,7 +1911,7 @@ h1 {
 
 # 實際應用
 
-```ruby {monaco-diff}
+```ruby{monaco-diff}
 scope :with_any_tags, ->(tag_titles) {
   where(id: StudentsTag.joins(:tag).where(tags: { title: tag_titles }).select(:student_id))
 }
