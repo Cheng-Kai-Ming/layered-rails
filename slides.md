@@ -1928,6 +1928,7 @@ scope :with_all_tags, ->(tag_titles) {
 scope :with_any_tags, Queries::Student::WithAnyTagsQuery[self]
 
 scope :with_all_tags, Queries::Student::StudentWithAllTagsQuery[self]
+
 ```
 
 
