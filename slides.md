@@ -1912,6 +1912,7 @@ h1 {
 # 實際應用
 
 ```ruby{monaco-diff}
+
 scope :with_any_tags, ->(tag_titles) {
   where(id: StudentsTag.joins(:tag).where(tags: { title: tag_titles }).select(:student_id))
 }
@@ -1924,7 +1925,9 @@ scope :with_all_tags, ->(tag_titles) {
               .group(:student_id)
               .having('COUNT(tag_id) = ?', tag_titles.count))
 }
+
 ~~~
+
 scope :with_any_tags, Queries::Student::WithAnyTagsQuery[self]
 
 scope :with_all_tags, Queries::Student::StudentWithAllTagsQuery[self]
